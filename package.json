@@ -1,16 +1,27 @@
 {
-  "name": "myflix-client",
+  "name": "myflixclient",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
+  "main": "src/imdex.html",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.13"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jgoats/myFlix-client.git"
   },
-  "author": "Justin Goats",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jgoats/myFlix-client/issues"
