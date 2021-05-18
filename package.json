@@ -1,0 +1,19 @@
+{
+  "name": "myflix-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgoats/myFlix-client.git"
+  },
+  "author": "Justin Goats",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgoats/myFlix-client/issues"
+  },
+  "homepage": "https://github.com/jgoats/myFlix-client#readme"
+}
