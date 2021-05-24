@@ -33,7 +33,7 @@ export class MainView extends React.Component {
         // destructuring movies , selectedMovie from this.state
         const { movies, selectedMovie } = this.state;
         // if no movies present from this.state.movies, return a div that tells the user the list is empty
-        if (movies.length === 0) return <div className="main-view">The list is empty!</div>;
+        if (movies.length === 0) return <div className="main-view" />;
 
         return (
             /*if selected movie is equal to null (which is the default state) map through the movies array inside the state
