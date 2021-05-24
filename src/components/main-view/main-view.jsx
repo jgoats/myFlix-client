@@ -17,6 +17,7 @@ export class MainView extends React.Component {
                 this.setState({
                     movies: response.data
                 });
+                console.log(this.state.movies);
             })
             .catch(error => {
                 console.log(error);

@@ -9,15 +9,15 @@ export class MovieView extends React.Component {
             the selectedMovie state back to null when clicked*/
             <div className="movie-view">
                 <div className="movie-poster">
-                    <img src={movie.ImagePath} />
+                    <img src={`../../images/${movie.imageURL}`} />
                 </div>
                 <div className="movie-title">
                     <span className="label">Title</span>
-                    <span className="value">{movie.Title}</span>
+                    <span className="value">{movie.title}</span>
                 </div>
                 <div className="movie-description">
                     <span className="label">Description</span>
-                    <span className="value">{movie.Description}</span>
+                    <span className="value">{movie.description}</span>
                 </div>
                 <button onClick={() => { onBackClick(null) }}>Return to All Movies</button>
             </div>

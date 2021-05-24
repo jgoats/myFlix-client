@@ -26305,6 +26305,7 @@ try {
         this.setState({
           movies: response.data
         });
+        console.log(this.state.movies);
       }).catch(error => {
         console.log(error);
       });
@@ -26326,7 +26327,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 41
           }
         })
@@ -26343,7 +26344,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44,
+            lineNumber: 45,
             columnNumber: 13
           }
         }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_movieViewMovie.MovieView, {
@@ -26354,7 +26355,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 34
           }
         }) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
@@ -26366,7 +26367,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47,
+            lineNumber: 48,
             columnNumber: 25
           }
         })))
@@ -26410,7 +26411,7 @@ try {
             lineNumber: 8,
             columnNumber: 16
           }
-        }, movieData.Title)
+        }, movieData.title)
       );
     }
   }
@@ -26658,7 +26659,7 @@ try {
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: movie.ImagePath,
+          src: `../../images/${movie.imageURL}`,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26689,7 +26690,7 @@ try {
             lineNumber: 16,
             columnNumber: 21
           }
-        }, movie.Title)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        }, movie.title)), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-description",
           __self: this,
           __source: {
@@ -26713,7 +26714,7 @@ try {
             lineNumber: 20,
             columnNumber: 21
           }
-        }, movie.Description)), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        }, movie.description)), /*#__PURE__*/_reactDefault.default.createElement("button", {
           onClick: () => {
             onBackClick(null);
           },
