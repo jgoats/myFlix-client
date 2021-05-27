@@ -1,14 +1,19 @@
 import React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+
+import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie";
+import { LoginView } from '../login-view/login-view';
 
 export class MainView extends React.Component {
     constructor() {
         super()
         this.state = {
             movies: [],
-            selectedMovie: null
+            selectedMovie: null,
+            user: null
         }
     }
     componentDidMount() {
@@ -23,6 +28,22 @@ export class MainView extends React.Component {
                 console.log(error);
             });
     }
+    onLoggedIn(user) {
+        this.setState({
+            user
+        });
+    }
+    onRegister(register) {
+        this.setState({
+            register
+        });
+    }
+    toggleRegister = (e) => {
+        e.preventDefault();
+        this.setState({
+            register: !this.state.register
+        })
+    }
     // function to change state to selected movie when clicked or to change selected movie back to null
     setSelectedMovie(newSelectedMovie) {
         this.setState({
@@ -32,7 +53,10 @@ export class MainView extends React.Component {
     // runs everytime the state of mainView changes and return a single jsx element
     render() {
         // destructuring movies , selectedMovie from this.state
-        const { movies, selectedMovie } = this.state;
+        const { movies, selectedMovie, register } = this.state;
+        if (register) return <RegistrationView onRegister={register => this.onRegister(register)} toggleRegister={this.toggleRegister} />;
+        /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/
+        if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} toggleRegister={this.toggleRegister} />;
         // if no movies present from this.state.movies, return a div that tells the user the list is empty
         if (movies.length === 0) return <div className="main-view" />;
 
