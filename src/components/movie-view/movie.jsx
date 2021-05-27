@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 export class MovieView extends React.Component {
 
     render() {
@@ -10,7 +10,7 @@ export class MovieView extends React.Component {
             the selectedMovie state back to null when clicked*/
             <div className="movie-view">
                 <div className="movie-poster">
-                    <img src={`../../images/${movie.imageURL}`} />
+                    <img src={movie.imageURL} />
                 </div>
                 <div className="movie-title">
                     <span className="label">Title</span>
