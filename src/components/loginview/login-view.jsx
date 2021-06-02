@@ -1,4 +1,5 @@
 import React from 'react';
+import "./login-view.scss";
 
 export default class LoginView extends React.Component {
     constructor(props) {

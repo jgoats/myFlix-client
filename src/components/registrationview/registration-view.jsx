@@ -1,4 +1,5 @@
 import React from "react";
+import "./registration-view.scss";
 
 export default class RegistrationView extends React.Component {
     constructor() {

@@ -4,6 +4,7 @@ import RegistrationView from "../registrationview/registration-view.jsx";
 import LoginView from "../loginview/login-view.jsx";
 import MovieCard from "../moviecard/movie-card.jsx";
 import MovieView from "../movieview/movie-view.jsx";
+import "./main-view.scss";
 
 
 export default class MainView extends React.Component {
