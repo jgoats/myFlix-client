@@ -22013,6 +22013,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _registrationViewJsx = require("../registrationview/registration-view.jsx");
+var _registrationViewJsxDefault = parcelHelpers.interopDefault(_registrationViewJsx);
 var _loginViewJsx = require("../loginview/login-view.jsx");
 var _loginViewJsxDefault = parcelHelpers.interopDefault(_loginViewJsx);
 var _movieCardJsx = require("../moviecard/movie-card.jsx");
@@ -22025,7 +22027,9 @@ class MainView extends _reactDefault.default.Component {
         this.state = {
             movies: [],
             selectedMovie: null,
-            user: null
+            user: null,
+            registered: null,
+            errorMessage: ""
         };
     }
     changeSelectedMovie = function(selected) {
@@ -22034,8 +22038,19 @@ class MainView extends _reactDefault.default.Component {
         });
     };
     onLoggedIn(newUser) {
-        this.setState({
+        if (newUser[0] === this.state.registered[0] && newUser[1] === this.state.registered[1]) this.setState({
             user: newUser
+        });
+        else this.setState({
+            user: null,
+            errorMessage: "incorrect username and or password used"
+        });
+    }
+    onRegistered(newAccount) {
+        this.setState({
+            registered: [
+                ...newAccount
+            ]
         });
     }
     componentDidMount() {
@@ -22049,13 +22064,23 @@ class MainView extends _reactDefault.default.Component {
         });
     }
     render() {
-        const { movies , selectedMovie , user  } = this.state;
+        const { movies , selectedMovie , user , registered  } = this.state;
+        if (!registered) return(/*#__PURE__*/ _reactDefault.default.createElement(_registrationViewJsxDefault.default, {
+            onRegistered: (newAccount)=>this.onRegistered(newAccount)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
+                lineNumber: 57
+            },
+            __self: this
+        }));
         if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_loginViewJsxDefault.default, {
+            message: this.state.message,
             onLoggedIn: (newUser)=>this.onLoggedIn(newUser)
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 41
+                lineNumber: 58
             },
             __self: this
         }));
@@ -22063,7 +22088,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 43
+                lineNumber: 60
             },
             __self: this
         }, "The list is empty!"));
@@ -22071,7 +22096,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 45
+                lineNumber: 62
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieViewJsxDefault.default, {
@@ -22081,7 +22106,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 47
+                lineNumber: 64
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCardJsxDefault.default, {
@@ -22092,7 +22117,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                    lineNumber: 49
+                    lineNumber: 66
                 },
                 __self: this
             })
@@ -22106,7 +22131,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R","../registrationview/registration-view.jsx":"5oKet"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
@@ -24331,20 +24356,22 @@ class LoginView extends _reactDefault.default.Component {
     }
     handleSubmit() {
         const { username , password  } = this.state;
-        console.log(username, password);
-        /* Send a request to the server for authentication */ this.props.onLoggedIn(username);
+        /* Send a request to the server for authentication */ this.props.onLoggedIn([
+            username,
+            password
+        ]);
     }
     render() {
         return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 38
+                lineNumber: 37
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 39
+                lineNumber: 38
             },
             __self: this
         }, "Username:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24353,13 +24380,13 @@ class LoginView extends _reactDefault.default.Component {
             onChange: this.onUsernameChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 41
+                lineNumber: 40
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 43
+                lineNumber: 42
             },
             __self: this
         }, "Password:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24368,10 +24395,17 @@ class LoginView extends _reactDefault.default.Component {
             onChange: this.onPasswordChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 45
+                lineNumber: 44
             },
             __self: this
-        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "message",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 46
+            },
+            __self: this
+        }, this.props.message), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             type: "button",
             onClick: this.handleSubmit,
             __source: {
@@ -24383,6 +24417,147 @@ class LoginView extends _reactDefault.default.Component {
     }
 }
 exports.default = LoginView;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5oKet":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class RegistrationView extends _reactDefault.default.Component {
+    constructor(){
+        super();
+        this.state = {
+            username: "",
+            password: "",
+            email: "",
+            birthday: ""
+        };
+        this.onUsernameChange = this.onUsernameChange.bind(this);
+        this.onPasswordChange = this.onPasswordChange.bind(this);
+        this.onEmailChange = this.onEmailChange.bind(this);
+        this.onBirthdayChange = this.onBirthdayChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    onUsernameChange(event) {
+        this.setState({
+            username: event.target.value
+        });
+    }
+    onPasswordChange(event) {
+        this.setState({
+            password: event.target.value
+        });
+    }
+    onEmailChange(event) {
+        this.setState({
+            email: event.target.value
+        });
+    }
+    onBirthdayChange(event) {
+        this.setState({
+            birthday: event.target.value
+        });
+    }
+    handleSubmit() {
+        const { username , password , email , birthday  } = this.state;
+        console.log(username, password, email, birthday);
+        /* Send a request to the server for authentication */ this.props.onRegistered([
+            username,
+            password,
+            email,
+            birthday
+        ]);
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 49
+            },
+            __self: this
+        }, "Username:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            value: this.state.username,
+            onChange: this.onUsernameChange,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }, "Password:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "password",
+            value: this.state.password,
+            onChange: this.onPasswordChange,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 55
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 57
+            },
+            __self: this
+        }, "Email:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            value: this.state.email,
+            onChange: this.onEmailChange,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 61
+            },
+            __self: this
+        }, "Birthday:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            value: this.state.birthday,
+            onChange: this.onBirthdayChange,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 63
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "button",
+            onClick: this.handleSubmit,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 65
+            },
+            __self: this
+        }, "Submit")));
+    }
+}
+exports.default = RegistrationView;
 
   helpers.postlude(module);
 } finally {

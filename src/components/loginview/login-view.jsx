@@ -28,9 +28,8 @@ export default class LoginView extends React.Component {
 
     handleSubmit() {
         const { username, password } = this.state;
-        console.log(username, password);
         /* Send a request to the server for authentication */
-        this.props.onLoggedIn(username);
+        this.props.onLoggedIn([username, password]);
     }
 
     render() {
@@ -44,6 +43,7 @@ export default class LoginView extends React.Component {
                     Password:
           <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
                 </label>
+                <div className="message">{this.props.message}</div>
                 <button type="button" onClick={this.handleSubmit}>Submit</button>
             </form>
         );
