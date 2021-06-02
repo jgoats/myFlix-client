@@ -22013,8 +22013,6 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _registrationViewJsx = require("../registrationview/registration-view.jsx");
 var _registrationViewJsxDefault = parcelHelpers.interopDefault(_registrationViewJsx);
 var _loginViewJsx = require("../loginview/login-view.jsx");
@@ -22073,7 +22071,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 59
+                lineNumber: 58
             },
             __self: this
         }));
@@ -22083,7 +22081,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 60
+                lineNumber: 59
             },
             __self: this
         }));
@@ -22091,7 +22089,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 62
+                lineNumber: 61
             },
             __self: this
         }, "The list is empty!"));
@@ -22099,7 +22097,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 64
+                lineNumber: 63
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieViewJsxDefault.default, {
@@ -22109,7 +22107,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 66
+                lineNumber: 65
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCardJsxDefault.default, {
@@ -22120,7 +22118,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                    lineNumber: 68
+                    lineNumber: 67
                 },
                 __self: this
             })
@@ -22134,7 +22132,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R","../registrationview/registration-view.jsx":"5oKet","./main-view.scss":"4Y6IV","prop-types":"4dfy5"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R","../registrationview/registration-view.jsx":"5oKet","./main-view.scss":"4Y6IV"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
