@@ -46,24 +46,26 @@ export default class RegistrationView extends React.Component {
     }
     render() {
         return (
-            <form>
-                <label>
-                    Username:
-          <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
-                </label>
-                <label>
-                    Password:
-          <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
-                </label>
-                <label>
-                    Email:
-          <input type="text" value={this.state.email} onChange={this.onEmailChange} />
-                </label>
-                <label>
-                    Birthday:
-          <input type="text" value={this.state.birthday} onChange={this.onBirthdayChange} />
-                </label>
-                <button type="button" onClick={this.handleSubmit}>Submit</button>
+            <form className="main-container">
+                <div className="container">
+                    <label className="label-container">
+                        <span className="label">Username:</span>
+                        <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
+                    </label>
+                    <label className="label-container">
+                        <span className="label">Password:</span>
+                        <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
+                    </label>
+                    <label className="label-container">
+                        <span className="label">Email:</span>
+                        <input type="text" value={this.state.email} onChange={this.onEmailChange} />
+                    </label>
+                    <label className="label-container">
+                        <span className="label">Birthday:</span>
+                        <input type="text" value={this.state.birthday} onChange={this.onBirthdayChange} />
+                    </label>
+                    <button className="button" type="button" onClick={this.handleSubmit}>Submit</button>
+                </div>
             </form>
         )
     }

@@ -1,0 +1,35 @@
+body {
+    background-color : rgb(71, 150, 150);
+    box-sizing : border-box; 
+}
+.main-container {
+    margin-top : 6%;
+    display : block;
+    border-radius : 20px;
+}
+
+.container {
+   display : grid;
+   grid-template-columns : 1fr;
+   grid-template-rows : repeat(5,100px);
+}
+.label-container {
+    text-align : center;
+    padding-top : 40px;
+    background-color : whitesmoke;
+    width : 500px;
+    margin-left : auto;
+    margin-right : auto;
+}
+.label {
+    padding-right : 10px;
+    font-weight : bold;
+}
+.button {
+    display : block;
+    margin-left : auto;
+    margin-right : auto;
+    width : 100px;
+    text-align : center;
+    height : 25px;
+}
