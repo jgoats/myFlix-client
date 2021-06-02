@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import "./login-view.scss";
 
 export default class LoginView extends React.Component {
@@ -50,3 +51,6 @@ export default class LoginView extends React.Component {
         );
     }
 }
+LoginView.propTypes = {
+    onLoggedIn: PropTypes.func.isRequired
+};

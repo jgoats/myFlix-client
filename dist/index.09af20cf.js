@@ -22013,6 +22013,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _registrationViewJsx = require("../registrationview/registration-view.jsx");
 var _registrationViewJsxDefault = parcelHelpers.interopDefault(_registrationViewJsx);
 var _loginViewJsx = require("../loginview/login-view.jsx");
@@ -22071,7 +22073,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 58
+                lineNumber: 59
             },
             __self: this
         }));
@@ -22081,7 +22083,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 59
+                lineNumber: 60
             },
             __self: this
         }));
@@ -22089,7 +22091,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 61
+                lineNumber: 62
             },
             __self: this
         }, "The list is empty!"));
@@ -22097,7 +22099,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 63
+                lineNumber: 64
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieViewJsxDefault.default, {
@@ -22107,7 +22109,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 65
+                lineNumber: 66
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCardJsxDefault.default, {
@@ -22118,7 +22120,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                    lineNumber: 67
+                    lineNumber: 68
                 },
                 __self: this
             })
@@ -22132,7 +22134,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R","../registrationview/registration-view.jsx":"5oKet","./main-view.scss":"4Y6IV"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../moviecard/movie-card.jsx":"1SXa2","../movieview/movie-view.jsx":"XMdQR","../loginview/login-view.jsx":"2EW3R","../registrationview/registration-view.jsx":"5oKet","./main-view.scss":"4Y6IV","prop-types":"4dfy5"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
@@ -24335,6 +24337,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _loginViewScss = require("./login-view.scss");
 class LoginView extends _reactDefault.default.Component {
     constructor(props){
@@ -24368,13 +24372,13 @@ class LoginView extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 38
+                lineNumber: 39
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 39
+                lineNumber: 40
             },
             __self: this
         }, "Username:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24383,13 +24387,13 @@ class LoginView extends _reactDefault.default.Component {
             onChange: this.onUsernameChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 41
+                lineNumber: 42
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 43
+                lineNumber: 44
             },
             __self: this
         }, "Password:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24398,14 +24402,14 @@ class LoginView extends _reactDefault.default.Component {
             onChange: this.onPasswordChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 45
+                lineNumber: 46
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "message",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 47
+                lineNumber: 48
             },
             __self: this
         }, this.props.message), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -24413,20 +24417,23 @@ class LoginView extends _reactDefault.default.Component {
             onClick: this.handleSubmit,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 48
+                lineNumber: 49
             },
             __self: this
         }, "Submit")));
     }
 }
 exports.default = LoginView;
+LoginView.propTypes = {
+    onLoggedIn: _propTypesDefault.default.func.isRequired
+};
 
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117"}],"4C117":[function() {},{}],"5oKet":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117","prop-types":"4dfy5"}],"4C117":[function() {},{}],"5oKet":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
