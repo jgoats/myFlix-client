@@ -1,34 +1,70 @@
 body {
-    box-sizing : border-box; 
+   box-sizing : border-box;
+   margin : 0px;
+   padding : 0px;
+   font-family: 'Quicksand', sans-serif;
 }
-.main-container {
-    margin-top : 6%;
-    display : block;
-    border-radius : 20px;
+.background-container {
+    position : absolute;
+    height : 100vh;
+    width : 100vw;
+    background : url("url:/src/components/registrationview/Vanishing-Stripes(1).svg")
 }
-
-.container {
-   display : grid;
-   grid-template-columns : 1fr;
-   grid-template-rows : repeat(5,100px);
+.screen-container {
+    display : grid;
+    grid-template-columns : 1fr 1fr;
+    grid-template-rows : 100%;
+    height : 80vh;
+    margin-top : 5%;
+    margin-left : 5%;
+    margin-right : 5%;
+    margin-bottom : 5%;
+    border-radius : 10px;
 }
-.label-container {
+.hero-container {
+    background : url("url:/src/components/registrationview/Zig-Zag.svg");
     text-align : center;
-    padding-top : 40px;
-    background-color : lightslategray;
-    width : 500px;
-    margin-left : auto;
-    margin-right : auto;
+    .logo {
+        width : 100px;
+        height : 100px;
+        display : block;
+        margin : 10px;
+    }
 }
-.label {
-    padding-right : 10px;
-    font-weight : bold;
-}
-.button {
-    display : block;
-    margin-left : auto;
-    margin-right : auto;
-    width : 100px;
-    text-align : center;
-    height : 25px;
+.form-container {
+    background-color : whitesmoke;
+    .label-container {
+        display : grid;
+        grid-template-columns : 1fr;
+        grid-template-rows : auto;
+        .label {
+            display : block;
+            font-weight : bold;
+            text-align : left;
+            margin-top : 12vh;
+            position : relative;
+            left : 50%;
+            transform : translateX(-25%);
+            span {
+                padding-right : 15px;
+            }
+        }
+        .button {
+            width : 75px;
+            background-color : lightgreen;
+            color : black;
+            padding : 5px 5px;
+            border-radius : 10px;
+            border : none;
+            box-shadow : 2px 2px 2px green;
+            margin-right : auto;
+            margin-left : auto;
+            margin-top : 5vh;
+        }
+        .button:hover {
+            cursor: pointer;
+            transform : scale(1.1);
+            transition : 0.3s;
+            }
+    }
 }

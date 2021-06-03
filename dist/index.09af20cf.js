@@ -24443,6 +24443,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _registrationViewScss = require("./registration-view.scss");
+var _movieTicketSvg = require("url:/src/components/registrationview/movie-ticket.svg");
+var _movieTicketSvgDefault = parcelHelpers.interopDefault(_movieTicketSvg);
 class RegistrationView extends _reactDefault.default.Component {
     constructor(){
         super();
@@ -24489,32 +24491,72 @@ class RegistrationView extends _reactDefault.default.Component {
         ]);
     }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
-            className: "main-container",
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 49
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "container",
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "background-container",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
                 lineNumber: 50
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            className: "label-container",
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "screen-container",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
                 lineNumber: 51
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-            className: "label",
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "hero-container",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
                 lineNumber: 52
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            className: "logo",
+            src: _movieTicketSvgDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }, "Welcome to MyFlix"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 55
+            },
+            __self: this
+        }, "Create A New Account Today!")), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            className: "form-container",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 57
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "label-container",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 58
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "label",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 60
             },
             __self: this
         }, "Username:"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24523,21 +24565,20 @@ class RegistrationView extends _reactDefault.default.Component {
             onChange: this.onUsernameChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 53
+                lineNumber: 61
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            className: "label-container",
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 55
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "label",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 56
+                lineNumber: 63
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 64
             },
             __self: this
         }, "Password:"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24546,21 +24587,20 @@ class RegistrationView extends _reactDefault.default.Component {
             onChange: this.onPasswordChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 57
+                lineNumber: 65
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            className: "label-container",
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 59
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "label",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 60
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 68
             },
             __self: this
         }, "Email:"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24569,21 +24609,20 @@ class RegistrationView extends _reactDefault.default.Component {
             onChange: this.onEmailChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 61
+                lineNumber: 69
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-            className: "label-container",
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 63
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "label",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 64
+                lineNumber: 71
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
+                lineNumber: 72
             },
             __self: this
         }, "Birthday:"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
@@ -24592,7 +24631,7 @@ class RegistrationView extends _reactDefault.default.Component {
             onChange: this.onBirthdayChange,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 65
+                lineNumber: 73
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
@@ -24601,10 +24640,10 @@ class RegistrationView extends _reactDefault.default.Component {
             onClick: this.handleSubmit,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
-                lineNumber: 67
+                lineNumber: 75
             },
             __self: this
-        }, "Submit"))));
+        }, "Submit"))))));
     }
 }
 exports.default = RegistrationView;
@@ -24614,6 +24653,37 @@ exports.default = RegistrationView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./registration-view.scss":"1VjJs"}],"1VjJs":[function() {},{}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./registration-view.scss":"1VjJs","url:/src/components/registrationview/movie-ticket.svg":"gGeQO"}],"1VjJs":[function() {},{}],"gGeQO":[function(require,module,exports) {
+module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.e5f6191c.svg";
+
+},{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
+"use strict";
+/* globals document:readonly */ var bundleURL = null;
+function getBundleURLCached() {
+    if (!bundleURL) bundleURL = getBundleURL();
+    return bundleURL;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) return getBaseURL(matches[0]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    let matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
 
 //# sourceMappingURL=index.09af20cf.js.map

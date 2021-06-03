@@ -1,5 +1,6 @@
 import React from "react";
 import "./registration-view.scss";
+import MovieTicket from "url:/src/components/registrationview/movie-ticket.svg";
 
 export default class RegistrationView extends React.Component {
     constructor() {
@@ -46,27 +47,36 @@ export default class RegistrationView extends React.Component {
     }
     render() {
         return (
-            <form className="main-container">
-                <div className="container">
-                    <label className="label-container">
-                        <span className="label">Username:</span>
-                        <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
-                    </label>
-                    <label className="label-container">
-                        <span className="label">Password:</span>
-                        <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
-                    </label>
-                    <label className="label-container">
-                        <span className="label">Email:</span>
-                        <input type="text" value={this.state.email} onChange={this.onEmailChange} />
-                    </label>
-                    <label className="label-container">
-                        <span className="label">Birthday:</span>
-                        <input type="text" value={this.state.birthday} onChange={this.onBirthdayChange} />
-                    </label>
-                    <button className="button" type="button" onClick={this.handleSubmit}>Submit</button>
+            <div className="background-container">
+                <div className="screen-container">
+                    <div className="hero-container">
+                        <img className="logo" src={MovieTicket} />
+                        <h1>Welcome to MyFlix</h1>
+                        <h3>Create A New Account Today!</h3>
+                    </div>
+                    <form className="form-container">
+                        <div className="label-container">
+                            <label className="label">
+                                <span>Username:</span>
+                                <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
+                            </label>
+                            <label className="label">
+                                <span>Password:</span>
+                                <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
+                            </label>
+                            <label className="label">
+                                <span>Email:</span>
+                                <input type="text" value={this.state.email} onChange={this.onEmailChange} />
+                            </label>
+                            <label className="label">
+                                <span>Birthday:</span>
+                                <input type="text" value={this.state.birthday} onChange={this.onBirthdayChange} />
+                            </label>
+                            <button className="button" type="button" onClick={this.handleSubmit}>Submit</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         )
     }
 }
