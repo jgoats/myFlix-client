@@ -54,7 +54,7 @@ export default class RegistrationView extends React.Component {
                     <div className="hero-container">
                         <img className="logo" src={MovieTicket} />
                         <h1>Welcome to MyFlix</h1>
-                        <h3>Create A New Account Today!</h3>
+                        <h5>Create A New Account Today!</h5>
                     </div>
                     <div className="form-container">
                         <div className="adjust-form-size">

@@ -25975,7 +25975,7 @@ class RegistrationView extends _reactDefault.default.Component {
                 lineNumber: 56
             },
             __self: this
-        }, "Welcome to MyFlix"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+        }, "Welcome to MyFlix"), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\registrationview\\registration-view.jsx",
                 lineNumber: 57
