@@ -15,10 +15,11 @@ body {
     grid-template-columns : 1fr 1fr;
     grid-template-rows : 100%;
     height : 80vh;
-    margin-top : 5%;
-    margin-left : 10%;
-    margin-right : 10%;
-    margin-bottom : 5%;
+    position : relative;
+    top : 50%;
+    transform : translateY(-50%);
+    margin-left : 20%;
+    margin-right : 20%;
     border-radius : 10px;
     overflow : hidden;
 }

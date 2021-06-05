@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import "./login-view.scss";
+import MovieTicket from "url:/src/components/loginview/movie-ticket.svg";
 
 export default class LoginView extends React.Component {
     constructor(props) {
@@ -37,21 +38,34 @@ export default class LoginView extends React.Component {
     }
 
     render() {
-        return (
-            <Form>
-                <Form.Group controlId="formUsername">
-                    <Form.Label>Username:</Form.Label>
-                    <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
-                </Form.Group>
+        return (<div className="background">
+            <div className="content-container">
 
-                <Form.Group controlId="formPassword">
-                    <Form.Label>Password:</Form.Label>
-                    <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
-                </Form.Group>
-                <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-                    submit
+                <div className="hero">
+                    <img className="hero-logo" src={MovieTicket} />
+                    <h1>Welcome to MyFlix</h1>
+                    <h5>sign in here</h5>
+                </div>
+                <div className="form">
+                    <div className="form-size">
+                        <Form>
+                            <Form.Group controlId="formUsername">
+                                <Form.Label>Username:</Form.Label>
+                                <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
+                            </Form.Group>
+
+                            <Form.Group controlId="formPassword">
+                                <Form.Label>Password:</Form.Label>
+                                <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
+                            </Form.Group>
+                            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                                submit
                 </Button>
-            </Form>
+                        </Form>
+                    </div>
+                </div>
+            </div>
+        </div>
         );
     }
 }

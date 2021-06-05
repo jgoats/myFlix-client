@@ -24342,6 +24342,8 @@ var _formDefault = parcelHelpers.interopDefault(_form);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _loginViewScss = require("./login-view.scss");
+var _movieTicketSvg = require("url:/src/components/loginview/movie-ticket.svg");
+var _movieTicketSvgDefault = parcelHelpers.interopDefault(_movieTicketSvg);
 class LoginView extends _reactDefault.default.Component {
     constructor(props){
         super(props);
@@ -24371,23 +24373,78 @@ class LoginView extends _reactDefault.default.Component {
         ]);
     }
     render() {
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "background",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
                 lineNumber: 41
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "content-container",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 42
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "hero",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            className: "hero-logo",
+            src: _movieTicketSvgDefault.default,
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 45
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 46
+            },
+            __self: this
+        }, "Welcome to MyFlix"), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 47
+            },
+            __self: this
+        }, "sign in here")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 49
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-size",
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 50
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
+                lineNumber: 51
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
             controlId: "formUsername",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 42
+                lineNumber: 52
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 43
+                lineNumber: 53
             },
             __self: this
         }, "Username:"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -24396,20 +24453,20 @@ class LoginView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 44
+                lineNumber: 54
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
             controlId: "formPassword",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 47
+                lineNumber: 57
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 48
+                lineNumber: 58
             },
             __self: this
         }, "Password:"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -24418,7 +24475,7 @@ class LoginView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 49
+                lineNumber: 59
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
@@ -24427,10 +24484,10 @@ class LoginView extends _reactDefault.default.Component {
             onClick: this.handleSubmit,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 51
+                lineNumber: 61
             },
             __self: this
-        }, "submit")));
+        }, "submit")))))));
     }
 }
 exports.default = LoginView;
@@ -24443,7 +24500,7 @@ LoginView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l"}],"4C117":[function() {},{}],"6A5ko":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","url:/src/components/loginview/movie-ticket.svg":"CoCct"}],"4C117":[function() {},{}],"6A5ko":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -25876,6 +25933,37 @@ var _default = createChainedFunction;
 exports.default = _default;
 module.exports = exports["default"];
 
+},{}],"CoCct":[function(require,module,exports) {
+module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.6ec6b879.svg";
+
+},{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
+"use strict";
+/* globals document:readonly */ var bundleURL = null;
+function getBundleURLCached() {
+    if (!bundleURL) bundleURL = getBundleURL();
+    return bundleURL;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) return getBaseURL(matches[0]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    let matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"5oKet":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -26112,34 +26200,6 @@ exports.default = RegistrationView;
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./registration-view.scss":"1VjJs","url:/src/components/registrationview/movie-ticket.svg":"gGeQO","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l"}],"1VjJs":[function() {},{}],"gGeQO":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.e5f6191c.svg";
 
-},{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
-"use strict";
-/* globals document:readonly */ var bundleURL = null;
-function getBundleURLCached() {
-    if (!bundleURL) bundleURL = getBundleURL();
-    return bundleURL;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) return getBaseURL(matches[0]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    let matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
+},{"./bundle-url":"3seVR"}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
 
 //# sourceMappingURL=index.09af20cf.js.map
