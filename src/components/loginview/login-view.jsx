@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
 import "./login-view.scss";
 
 export default class LoginView extends React.Component {
@@ -36,18 +38,20 @@ export default class LoginView extends React.Component {
 
     render() {
         return (
-            <form>
-                <label>
-                    Username:
-          <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
-                </label>
-                <label>
-                    Password:
-          <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
-                </label>
-                <div className="message">{this.props.message}</div>
-                <button type="button" onClick={this.handleSubmit}>Submit</button>
-            </form>
+            <Form>
+                <Form.Group controlId="formUsername">
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
+                </Form.Group>
+
+                <Form.Group controlId="formPassword">
+                    <Form.Label>Password:</Form.Label>
+                    <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
+                </Form.Group>
+                <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                    submit
+                </Button>
+            </Form>
         );
     }
 }

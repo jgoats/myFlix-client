@@ -1,8 +1,10 @@
 import "./button.scss";
 
-export function Button({ label }) {
+function Button({ label }) {
     return (
-        <button className="super-button">{label}</button>
+        <button className="btn">{label}</button>
     )
 }
+
+export default Button
 

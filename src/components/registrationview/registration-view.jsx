@@ -1,5 +1,7 @@
 import React from "react";
 import "./registration-view.scss";
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
 import MovieTicket from "url:/src/components/registrationview/movie-ticket.svg";
 
 export default class RegistrationView extends React.Component {
@@ -54,27 +56,34 @@ export default class RegistrationView extends React.Component {
                         <h1>Welcome to MyFlix</h1>
                         <h3>Create A New Account Today!</h3>
                     </div>
-                    <form className="form-container">
-                        <div className="label-container">
-                            <label className="label">
-                                <span>Username:</span>
-                                <input type="text" value={this.state.username} onChange={this.onUsernameChange} />
-                            </label>
-                            <label className="label">
-                                <span>Password:</span>
-                                <input type="password" value={this.state.password} onChange={this.onPasswordChange} />
-                            </label>
-                            <label className="label">
-                                <span>Email:</span>
-                                <input type="text" value={this.state.email} onChange={this.onEmailChange} />
-                            </label>
-                            <label className="label">
-                                <span>Birthday:</span>
-                                <input type="text" value={this.state.birthday} onChange={this.onBirthdayChange} />
-                            </label>
-                            <button className="button" type="button" onClick={this.handleSubmit}>Submit</button>
+                    <div className="form-container">
+                        <div className="adjust-form-size">
+                            <Form>
+                                <Form.Group controlId="formUsername">
+                                    <Form.Label>Username:</Form.Label>
+                                    <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
+                                </Form.Group>
+
+                                <Form.Group controlId="formPassword">
+                                    <Form.Label>Password:</Form.Label>
+                                    <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
+                                </Form.Group>
+
+                                <Form.Group controlId="formEmail">
+                                    <Form.Label>Email:</Form.Label>
+                                    <Form.Control type="text" onChange={e => this.onEmailChange(e.target.value)} />
+                                </Form.Group>
+
+                                <Form.Group controlId="formBirthday">
+                                    <Form.Label>Birthday:</Form.Label>
+                                    <Form.Control type="text" onChange={e => this.onBirthdayChange(e.target.value)} />
+                                </Form.Group>
+                                <Button className="form-button" variant="primary" type="submit" onClick={this.handleSubmit}>
+                                    Create Account
+                </Button>
+                            </Form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         )
