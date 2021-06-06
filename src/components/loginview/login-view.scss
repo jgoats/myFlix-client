@@ -2,10 +2,7 @@
     position : absolute;
     height : 100vh;
     width : 100vw;
-    background : url("url:/src/components/loginview/Endless-constellation.svg");
-}
-.circle {
-    background-color : yellow;
+    background : url("url:/src/images/Endless-constellation.svg");
 }
 .content-container {
     display : grid;
@@ -21,7 +18,7 @@
 
 }
 .hero {
-    background : url("url:/src/components/loginview/Zig-Zag (2).svg");
+    background : url("url:/src/images/Zig-Zag2.svg");
     text-align : center;
     .hero-logo {
         width : 100px;

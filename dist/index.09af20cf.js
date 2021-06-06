@@ -22066,25 +22066,8 @@ class MainView extends _reactDefault.default.Component {
     }
     render() {
         const { movies , selectedMovie , user , registered  } = this.state;
-        if (!registered) return(/*#__PURE__*/ _reactDefault.default.createElement(_registrationViewJsxDefault.default, {
-            onRegistered: (newAccount)=>this.onRegistered(newAccount)
-            ,
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 58
-            },
-            __self: this
-        }));
-        if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_loginViewJsxDefault.default, {
-            message: this.state.message,
-            onLoggedIn: (newUser)=>this.onLoggedIn(newUser)
-            ,
-            __source: {
-                fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\mainview\\main-view.jsx",
-                lineNumber: 59
-            },
-            __self: this
-        }));
+        //if (!registered) return <RegistrationView onRegistered={newAccount => this.onRegistered(newAccount)} />;
+        //if (!user) return <LoginView message={this.state.message} onLoggedIn={newUser => this.onLoggedIn(newUser)} />;
         if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "main-view",
             __source: {
@@ -24342,7 +24325,7 @@ var _formDefault = parcelHelpers.interopDefault(_form);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _loginViewScss = require("./login-view.scss");
-var _movieTicketSvg = require("url:/src/components/loginview/movie-ticket.svg");
+var _movieTicketSvg = require("url:/src/images/movie-ticket.svg");
 var _movieTicketSvgDefault = parcelHelpers.interopDefault(_movieTicketSvg);
 class LoginView extends _reactDefault.default.Component {
     constructor(props){
@@ -24377,21 +24360,21 @@ class LoginView extends _reactDefault.default.Component {
             className: "background",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 41
+                lineNumber: 42
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "content-container",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 42
+                lineNumber: 43
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "hero",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 44
+                lineNumber: 45
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
@@ -24399,52 +24382,52 @@ class LoginView extends _reactDefault.default.Component {
             src: _movieTicketSvgDefault.default,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 45
+                lineNumber: 46
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 46
+                lineNumber: 47
             },
             __self: this
         }, "Welcome to MyFlix"), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 47
+                lineNumber: 48
             },
             __self: this
         }, "sign in here")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 49
+                lineNumber: 50
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "form-size",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 50
+                lineNumber: 51
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 51
+                lineNumber: 52
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
             controlId: "formUsername",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 52
+                lineNumber: 53
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 53
+                lineNumber: 54
             },
             __self: this
         }, "Username:"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -24453,20 +24436,20 @@ class LoginView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 54
+                lineNumber: 55
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
             controlId: "formPassword",
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 57
+                lineNumber: 58
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 58
+                lineNumber: 59
             },
             __self: this
         }, "Password:"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
@@ -24475,7 +24458,7 @@ class LoginView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 59
+                lineNumber: 60
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
@@ -24484,7 +24467,7 @@ class LoginView extends _reactDefault.default.Component {
             onClick: this.handleSubmit,
             __source: {
                 fileName: "C:\\Users\\Justin\\Documents\\myFlix-client\\src\\components\\loginview\\login-view.jsx",
-                lineNumber: 61
+                lineNumber: 62
             },
             __self: this
         }, "submit")))))));
@@ -24500,7 +24483,7 @@ LoginView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","url:/src/components/loginview/movie-ticket.svg":"CoCct"}],"4C117":[function() {},{}],"6A5ko":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./login-view.scss":"4C117","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","url:/src/images/movie-ticket.svg":"5yei2"}],"4C117":[function() {},{}],"6A5ko":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -25933,8 +25916,8 @@ var _default = createChainedFunction;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{}],"CoCct":[function(require,module,exports) {
-module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.6ec6b879.svg";
+},{}],"5yei2":[function(require,module,exports) {
+module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.54a3d31a.svg";
 
 },{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
 "use strict";
@@ -25980,7 +25963,7 @@ var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _movieTicketSvg = require("url:/src/components/registrationview/movie-ticket.svg");
+var _movieTicketSvg = require("url:/src/images/movie-ticket.svg");
 var _movieTicketSvgDefault = parcelHelpers.interopDefault(_movieTicketSvg);
 class RegistrationView extends _reactDefault.default.Component {
     constructor(){
@@ -26197,9 +26180,6 @@ exports.default = RegistrationView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./registration-view.scss":"1VjJs","url:/src/components/registrationview/movie-ticket.svg":"gGeQO","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l"}],"1VjJs":[function() {},{}],"gGeQO":[function(require,module,exports) {
-module.exports = require('./bundle-url').getBundleURL() + "movie-ticket.e5f6191c.svg";
-
-},{"./bundle-url":"3seVR"}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./registration-view.scss":"1VjJs","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","url:/src/images/movie-ticket.svg":"5yei2"}],"1VjJs":[function() {},{}],"4Y6IV":[function() {},{}]},["1j6wU","3OoRv","6ISDH"], "6ISDH", "parcelRequiree668")
 
 //# sourceMappingURL=index.09af20cf.js.map

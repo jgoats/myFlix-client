@@ -4,11 +4,7 @@
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: url("Endless-constellation.11c64c7b.svg");
-}
-
-.circle {
-  background-color: yellow;
+  background: url("Endless-constellation.6cd92f7f.svg");
 }
 
 .content-container {
@@ -25,7 +21,7 @@
 }
 
 .hero {
-  background: url("Zig-Zag%20(2).20c555aa.svg");
+  background: url("Zig-Zag2.e8d720a4.svg");
   text-align: center;
 }
 
@@ -59,7 +55,7 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: url("Endless-Constellation.4ee2f6bf.svg");
+  background: url("Endless-Constellation.b70ffa1d.svg");
 }
 
 .screen-container {
@@ -77,7 +73,7 @@ body {
 }
 
 .hero-container {
-  background: url("Zig-Zag.50fdbb88.svg");
+  background: url("Zig-Zag2.e8d720a4.svg");
   text-align: center;
 }
 

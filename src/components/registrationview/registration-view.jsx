@@ -2,7 +2,7 @@ import React from "react";
 import "./registration-view.scss";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
-import MovieTicket from "url:/src/components/registrationview/movie-ticket.svg";
+import MovieTicket from "url:/src/images/movie-ticket.svg";
 
 export default class RegistrationView extends React.Component {
     constructor() {

@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import "./login-view.scss";
-import MovieTicket from "url:/src/components/loginview/movie-ticket.svg";
+import MovieTicket from "url:/src/images/movie-ticket.svg";
+
 
 export default class LoginView extends React.Component {
     constructor(props) {
