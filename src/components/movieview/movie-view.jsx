@@ -4,30 +4,15 @@ import "./movie-view.scss";
 
 export default class MovieView extends React.Component {
     render() {
-        const { movie, onBackClick } = this.props;
+        const { movie, onMovieClick } = this.props;
         return (
-            <div className="movie-view">
-                <div className="movie-poster">
-                    <img src={movie.imageURL} />
-                </div>
-                <div className="movie-title">
-                    <span className="label">Title: </span>
-                    <span className="value">{movie.title}</span>
-                </div>
-                <div className="movie-description">
-                    <span className="label">Description: </span>
-                    <span className="value">{movie.description}</span>
-                </div>
-                <button onClick={() => onBackClick(null)}>Back To Movie</button>
-            </div>
+            <div onClick={() => onMovieClick(movie)} className="movie-card">{movie.title}</div>
         )
     }
 }
 MovieView.propTypes = {
     movie: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        imageURL: PropTypes.string.isRequired
+        title: PropTypes.string
     }).isRequired,
-    onBackClick: PropTypes.func.isRequired
+    onMovieClick: PropTypes.func.isRequired
 };
