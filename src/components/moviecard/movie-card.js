@@ -9,11 +9,11 @@ export default class MovieCard extends React.Component {
         const { movie, onBackClick } = this.props;
         return (
             <Card>
-                <Card.Img variant="top" src={movie.imageURL} />
+                <Card.Img className="movie-img" variant="top" src={"/src/images/" + movie.imageURL} />
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <Card.Text>{movie.description}</Card.Text>
-                    <Button onClick={() => onMovieClick(movie)} variant="link">Open</Button>
+                    <Button onClick={() => onBackClick(movie)} variant="link">Close</Button>
                 </Card.Body>
             </Card>
         )
