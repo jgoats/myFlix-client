@@ -8,7 +8,7 @@ body {
     position : absolute;
     height : 100vh;
     width : 100vw;
-    background : url("url:/src/images/Endless-Constellation.svg");
+    background : url("/src/images/endless-constellation.svg");
 }
 .screen-container {
     display : grid;
@@ -24,7 +24,7 @@ body {
     overflow : hidden;
 }
 .hero-container {
-    background : url("url:/src/images/Zig-Zag2.svg");
+    background : url("/src/images/zig-zag2.svg");
     text-align : center;
     .logo {
         width : 100px;

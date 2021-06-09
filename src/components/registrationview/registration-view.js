@@ -2,7 +2,7 @@ import React from "react";
 import "./registration-view.scss";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
-import MovieTicket from "url:/src/images/movie-ticket.svg";
+import MovieTicket from "/src/images/movie-ticket.svg";
 
 export default class RegistrationView extends React.Component {
     constructor() {
@@ -41,10 +41,9 @@ export default class RegistrationView extends React.Component {
         })
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
         const { username, password, email, birthday } = this.state;
-        console.log(username, password, email, birthday);
-        /* Send a request to the server for authentication */
+        e.preventDefault();
         this.props.onRegistered([username, password, email, birthday]);
     }
     render() {
@@ -61,24 +60,24 @@ export default class RegistrationView extends React.Component {
                             <Form>
                                 <Form.Group controlId="formUsername">
                                     <Form.Label>Username:</Form.Label>
-                                    <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
+                                    <Form.Control type="text" onChange={event => this.onUsernameChange(event)} />
                                 </Form.Group>
 
                                 <Form.Group controlId="formPassword">
                                     <Form.Label>Password:</Form.Label>
-                                    <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
+                                    <Form.Control type="password" onChange={event => this.onPasswordChange(event)} />
                                 </Form.Group>
 
                                 <Form.Group controlId="formEmail">
                                     <Form.Label>Email:</Form.Label>
-                                    <Form.Control type="text" onChange={e => this.onEmailChange(e.target.value)} />
+                                    <Form.Control type="text" onChange={event => this.onEmailChange(event)} />
                                 </Form.Group>
 
                                 <Form.Group controlId="formBirthday">
                                     <Form.Label>Birthday:</Form.Label>
-                                    <Form.Control type="text" onChange={e => this.onBirthdayChange(e.target.value)} />
+                                    <Form.Control type="text" onChange={event => this.onBirthdayChange(event)} />
                                 </Form.Group>
-                                <Button className="form-button" variant="primary" type="submit" onClick={this.handleSubmit}>
+                                <Button className="form-button" variant="primary" type="submit" onClick={(e) => this.handleSubmit(e)}>
                                     Create Account
                 </Button>
                             </Form>

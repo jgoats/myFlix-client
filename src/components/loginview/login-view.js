@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import "./login-view.scss";
-import MovieTicket from "url:/src/images/movie-ticket.svg";
+import MovieTicket from "/src/images/movie-ticket.svg";
 
 
 export default class LoginView extends React.Component {
@@ -32,9 +32,9 @@ export default class LoginView extends React.Component {
         });
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
         const { username, password } = this.state;
-        /* Send a request to the server for authentication */
+        e.preventDefault();
         this.props.onLoggedIn([username, password]);
     }
 
@@ -52,14 +52,14 @@ export default class LoginView extends React.Component {
                         <Form>
                             <Form.Group controlId="formUsername">
                                 <Form.Label>Username:</Form.Label>
-                                <Form.Control type="text" onChange={e => this.onUsernameChange(e.target.value)} />
+                                <Form.Control type="text" onChange={event => this.onUsernameChange(event)} />
                             </Form.Group>
 
                             <Form.Group controlId="formPassword">
                                 <Form.Label>Password:</Form.Label>
-                                <Form.Control type="password" onChange={e => this.onPasswordChange(e.target.value)} />
+                                <Form.Control type="password" onChange={event => this.onPasswordChange(event)} />
                             </Form.Group>
-                            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                            <Button variant="primary" type="submit" onClick={(e) => this.handleSubmit(e)}>
                                 submit
                 </Button>
                         </Form>

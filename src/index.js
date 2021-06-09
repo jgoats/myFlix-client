@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "./index.scss";
-import MainView from "./components/mainview/main-view.jsx";
+import MainView from "./components/mainview/main-view.js";
 
 class MyFlixApplication extends React.Component {
     render() {

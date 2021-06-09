@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import RegistrationView from "../registrationview/registration-view.jsx";
-import LoginView from "../loginview/login-view.jsx";
-import MovieCard from "../moviecard/movie-card.jsx";
-import MovieView from "../movieview/movie-view.jsx";
+import RegistrationView from "../registrationview/registration-view.js";
+import LoginView from "../loginview/login-view.js";
+import MovieCard from "../moviecard/movie-card.js";
+import MovieView from "../movieview/movie-view.js";
 import "./main-view.scss";
 
 
@@ -27,7 +27,7 @@ export default class MainView extends React.Component {
         if (newUser[0] === this.state.registered[0] && newUser[1] === this.state.registered[1]) {
             this.setState({
                 user: newUser
-            })
+            });
         }
         else {
             this.setState({
@@ -55,8 +55,8 @@ export default class MainView extends React.Component {
     }
     render() {
         const { movies, selectedMovie, user, registered } = this.state;
-        //if (!registered) return <RegistrationView onRegistered={newAccount => this.onRegistered(newAccount)} />;
-        //if (!user) return <LoginView message={this.state.message} onLoggedIn={newUser => this.onLoggedIn(newUser)} />;
+        // if (!registered) return <RegistrationView onRegistered={newAccount => this.onRegistered(newAccount)} />;
+        // if (!user) return <LoginView message={this.state.message} onLoggedIn={newUser => this.onLoggedIn(newUser)} />;
 
         if (movies.length === 0) return <div className="main-view">The list is empty!</div>;
         return (
