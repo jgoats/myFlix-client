@@ -28,6 +28,16 @@ export default class MainView extends React.Component {
             this.setState({
                 user: newUser
             });
+            axios.get('https://movie-api426.herokuapp.com/movies')
+                .then(response => {
+                    this.setState({
+                        movies: response.data
+                    });
+                    console.log(this.state.movies);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
         else {
             this.setState({
@@ -40,18 +50,6 @@ export default class MainView extends React.Component {
         this.setState({
             registered: [...newAccount]
         })
-    }
-    componentDidMount() {
-        axios.get('https://movie-api426.herokuapp.com/movies')
-            .then(response => {
-                this.setState({
-                    movies: response.data
-                });
-                console.log(this.state.movies);
-            })
-            .catch(error => {
-                console.log(error);
-            });
     }
     render() {
         const { movies, selectedMovie, user, registered } = this.state;
