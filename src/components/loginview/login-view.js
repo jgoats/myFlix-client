@@ -36,7 +36,19 @@ export default class LoginView extends React.Component {
     handleSubmit(e) {
         const { username, password } = this.state;
         e.preventDefault();
-        this.props.onLoggedIn([username, password]);
+        console.log(username, password)
+        /* Send a request to the server for authentication */
+        axios.post('https://movie-api426.herokuapp.com/login', {
+            username: username,
+            password: password
+        })
+            .then(response => {
+                const data = response.data;
+                props.onLoggedIn(data);
+            })
+            .catch(e => {
+                console.log('no such user')
+            });
     }
 
     render() {
