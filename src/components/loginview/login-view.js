@@ -36,7 +36,8 @@ export default class LoginView extends React.Component {
     handleSubmit(e) {
         const { username, password } = this.state;
         e.preventDefault();
-        console.log(username, password)
+
+
         /* Send a request to the server for authentication */
         axios.post('https://movie-api426.herokuapp.com/login', {
             username: username,
@@ -44,7 +45,8 @@ export default class LoginView extends React.Component {
         })
             .then(response => {
                 const data = response.data;
-                props.onLoggedIn(data);
+                console.log(data);
+                this.props.onLoggedIn([username, password]);
             })
             .catch(e => {
                 console.log('no such user')
@@ -74,7 +76,7 @@ export default class LoginView extends React.Component {
                             </Form.Group>
                             <Button variant="primary" type="submit" onClick={(e) => this.handleSubmit(e)}>
                                 submit
-                </Button>
+                            </Button>
                         </Form>
                     </div>
                 </div>
